@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+body
+{
+  color: #fff;
+  background-color: #191970;
+}
+
+div#wrap
+{
+  margin: 0 auto;
+  width: 1000px;
+  text-align: center;
+
+  /*background-color: rgba(255,255,255,0.3);*/
+
+}
+
+header
+{
+
+}
+
+nav
+{
+
+}
+
+  nav ul
+  {
+    padding: 10px 0;
+    list-style-type: none;
+    border: 2px dashed #ffa500;
+    border-width: 3px 0;
+  }
+
+    nav ul li 
+    {
+      display: inline;
+      font-size: 0.8rem;
+    }
+
+      nav ul li a
+      {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        width: 160px;
+        padding: 15px 0;
+      }
+
+      nav ul li a:hover
+      {
+          transition: all 300ms 0s ease;
+          text-decoration: underline;
+          background-color: rgba(255,140,0,0.3);
+          color: #ffa500;
+          border-color: #ffa500;
+      }
+
+article
+{
+
+}
+
+section
+{
+  margin-bottom: 500px;
+}
+
+div .ptm
+{
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+div .ptm a
+{
+  text-decoration: none;
+  color: #fff;
+}
+/* index */
+section#index
+{
+
+}
+
+  section#index h2
+  {
+    
+  }
+
+  section#index dl
+  {
+    
+  }
+
+    section#index dl dt
+    {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    section#index dl dd
+    {
+      margin-bottom: 30px;
+    }
+
+
+/* 好きなもの */
+section#favorite
+{
+
+}
+
+  section#favorite h2
+  {
+
+  }
+
+  section#favorite h3
+  {
+
+  }
+
+  section#favorite table
+  {
+    margin: 0 auto 100px auto;
+    border-spacing: 10px;
+  }
+
+    section#favorite table th
+    {
+
+    }
+
+    section#favorite table td
+    {
+
+    }
+
+/* 嫌いなもの */
+section#dislike 
+{
+
+}
+
+  section#dislike dl
+  {
+    
+  }
+
+    section#dislike dl dt
+    {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    section#dislike dl dd
+    {
+      margin-bottom: 30px;
+    }
+
+    #sitake
+    {
+      color: #8b4513;
+    }
+
+    #kouon
+    {
+      color: #ffff00;
+    }
+
+    #kame
+    {
+      color: #6b8e23;
+    }
+
+
+/* プロフィールテーブル */
+table#prof
+{
+  width: 600px;
+  margin: 0 auto;
+  border-spacing: 0;
+  /*border-collapse: collapse;*/
+  text-align: center;
+  border-width: 2px;
+  border-color: #fff;
+  background-color: #191970;
+}
+
+table#prof th
+{
+  font-weight: normal;
+  padding: 0 5px;
+  border: 1px solid rgba(200,200,255,0.5);
+}
+
+table#prof td
+{
+  height: 50px;
+  padding: 0 5px;
+  border: 1px solid rgba(200,200,255,0.8);
+}
+
+table#prof td:hover
+{
+  transition: all 300ms 0s ease;
+  text-decoration: underline;
+  font-size: 130%;
+  color: #ffa500;
+  border-color: #ffa500;
+}
+
+table#prof td#td_img
+{
+  width: 200px;
+}
+
+table#prof td#td_img img
+{
+  vertical-align: bottom;
+}
+
+th
+{
+  background-color: rgb(173,216,230, 0.5);
+}
+
+/* リストのマークを変更 */
+.nakaguro { list-style-type: disc; }
+
+.siromaru { list-style-type: circle; }
+
+.sikaku { list-style-type: square; }
+ 
+.nasi { list-style-type: none; }
+
+/* マインドマップ */
+section#mindmap
+{
+
+}
+
+  section#mindmap h2 
+  {
+
+  }
+
+  section#mindmap ul#mm
+  {
+    width: 200px;
+    text-align: left;
+    margin: 0 auto;
+
+  }
+
+    section#mindmap ul li
+    {
+      
+    }
+
+  dd {
+    margin-left: 0;
+  }
+
+/* フリー */
+section#free
+{
+  height: 600px;
+}
+
+section#free #desc
+{
+  float: left;
+  text-align: left;
+}
+
+section#free #desc li
+{
+  text-align: left;
+}
+
+section#free #desc h3
+{
+  color: #ffa500;
+}
+
+section#free dt
+{
+  font-weight: bold;
+  color: #ffa500;
+}
+#hint1,#hint2,#hint3
+{
+  display: none;
+}
+
+
+footer
+{
+
+}

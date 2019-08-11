@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+body
+{
+  color: #fff;
+  background-color: #191970;
+}
+
+table
+{
+	border: 1px solid #000;
+}
+
+th, td
+{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+table#ichi
+{
+  width: 300px;
+  height: 300px;
+}
+
+td.ue
+{
+  vertical-align: top;
+}
+
+td.naka
+{
+  vertical-align: middle;
+}
+
+td.sita
+{
+  vertical-align: bottom;
+}
+
+td.hid
+{
+  text-align: left;
+}
+
+td.mig
+{
+  text-align: right;
+}
+
+td.chu
+{
+  text-align: center;
+}
+
+/* 見栄えの良いテーブル */
+table#gnbnk01
+{
+  border: none;
+  border-spacing: 5px;
+}
+
+table#gnbnk01 td
+{
+  border:none;
+  width: 200px;
+  font-size: 0.7rem;
+  padding: 10px; /* 内側の間隔 */
+  text-align: center;
+
+  background-color: #ffa500;
+}
+/* 見栄えのいいテーブル２ */
+table#gnbnk02
+{
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table#gnbnk02 td
+{
+  width: 200px;
+  font-size: 0.7rem;
+  padding: 10px; /* 内側の間隔 */
+  text-align: center;
+  border-color: #999
+}
+
+/* この下をコピー */
+
+/* プロフィールテーブル */
+table#prof
+{
+  width: 600px;
+  margin: 0 auto;
+  border-spacing: 0;
+  /*border-collapse: collapse;*/
+  text-align: center;
+  border-width: 2px;
+  border-color: #fff
+}
+
+table#prof th
+{
+  font-weight: normal;
+  padding: 0 5px;
+}
+
+table#prof td
+{
+  height: 50px;
+  padding: 0 5px;
+}
+
+table#prof td:hover
+{
+  transition: all 300ms 0s ease;
+  text-decoration: underline;
+  font-size: 130%;
+  color: #ffa500;
+  border-color: #ffa500;
+}
+
+table#prof td#td_img
+{
+  width: 200px;
+}
+
+table#prof td#td_img img
+{
+  vertical-align: bottom;
+}
+
+th
+{
+  background-color: rgb(173,216,230, 0.5);
+}
+

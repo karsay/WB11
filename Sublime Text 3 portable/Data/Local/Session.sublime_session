@@ -1,0 +1,500 @@
+{
+	"folder_history":
+	[
+	],
+	"last_version": 3207,
+	"last_window_id": 3,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 499.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"d",
+						"display\tproperty"
+					],
+					[
+						"wid",
+						"width\tproperty"
+					],
+					[
+						"bac",
+						"background\tproperty"
+					],
+					[
+						"in",
+						"inline\tdisplay"
+					],
+					[
+						"background",
+						"background-color\tproperty"
+					],
+					[
+						"met",
+						"meta\tTag"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/C/Users/nhs90556/Desktop/HAL/WB11/index.html"
+			],
+			"find":
+			{
+				"height": 27.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					">\n"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 640.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"tex",
+						"text-decoration\tproperty"
+					],
+					[
+						"back",
+						"background-size\tproperty"
+					],
+					[
+						"backgro",
+						"background-repeat\tproperty"
+					],
+					[
+						"d",
+						"display\tproperty"
+					],
+					[
+						"wid",
+						"width\tproperty"
+					],
+					[
+						"bac",
+						"background\tproperty"
+					],
+					[
+						"in",
+						"inline\tdisplay"
+					],
+					[
+						"background",
+						"background-color\tproperty"
+					],
+					[
+						"met",
+						"meta\tTag"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/C/Users/nhs90556/Desktop/HAL/WB11/index.html",
+					"settings":
+					{
+						"buffer_size": 719,
+						"encoding": "UTF-8",
+						"line_ending": "Windows",
+						"name": "こんにちは、柏木隆賢です。"
+					}
+				},
+				{
+					"contents": "<!DOCTYPE html>\n\n<html lang=\"ja\">\n\n\t<head>\n\n\t\t<meta charset=\"utf-8\">\n\n\t\t<title>次のページ</title>\n\n\t\t<style type=\"text/css\">\n\n\t\t\tbody\n\t\t\t{\n\t\t\t\tcolor: #000000;\n\t\t\t\tbackground-color: #ffffff;\n\t\t\t\tbackground-image:url(images/neko_w.png);\n\t\t\t\tbackground-size: cover;\n\t\t\t\tbackground-repeat: no-repeat;\n\t\t\t\theight: 100vh;\n\t\t\t\twidth: 100vh;\n\t\t\t}\n\t\t\t/* セレクタ｛プロパティ：値｝ */\n\n\t\t\ta:link{color: #ff0000;}\n\n\t\t\ta:visited{color: #00ff00;}\n\n\t\t\ta:hover{color: #ffffff;}\n\n\t\t\ta:active{color: #000000;}\n\n\t\t</style>\n\n\t</head>\n\n\t<body>\n\n\t\t<h1>\n\t\t\t次のページ\n\t\t</h1>\n\n\t\t<hr>\n\n\t\t<p>\n\t\t\t画像をクリックするとindexに戻ります。<br>\n\t\t\t<a href=\"index.html\"><img src=\"images/neko.jpg\" alt=\"indexに戻る猫\"></a>\n\t\t</p>\n\n\t\t<hr>\n\n\t\t<p>\n\t\t\t<a href=\"inu.html\">架空のページ</a><br>\n\t\t\t<a href=\"index.html\">最初のページ</a>\n\t\t</p>\n\n\t</body>\n\n</html>",
+					"file": "/C/Users/nhs90556/Desktop/HAL/WB11/next.html",
+					"file_size": 934,
+					"file_write_time": 132016835324894762,
+					"settings":
+					{
+						"buffer_size": 766,
+						"encoding": "UTF-8",
+						"line_ending": "Windows",
+						"name": "次のページ"
+					}
+				},
+				{
+					"file": "/C/Users/nhs90556/Desktop/HAL/WB11/style.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"encoding": "UTF-8",
+						"line_ending": "Windows"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/C/Users/nhs90556/Desktop/HAL/WB11/index1.html",
+				"/C/Users/nhs90556/Desktop/HAL/WB11/index.html"
+			],
+			"find":
+			{
+				"height": 27.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					">\n"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 1,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/C/Users/nhs90556/Desktop/HAL/WB11/index.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 719,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										495,
+										495
+									]
+								],
+								"settings":
+								{
+									"auto_name": "こんにちは、柏木隆賢です。",
+									"syntax": "Packages/HTML/HTML.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/C/Users/nhs90556/Desktop/HAL/WB11/next.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 766,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										356,
+										356
+									]
+								],
+								"settings":
+								{
+									"auto_name": "次のページ",
+									"syntax": "Packages/HTML/HTML.sublime-syntax",
+									"tab_size": 4
+								},
+								"translation.x": 0.0,
+								"translation.y": 54.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/C/Users/nhs90556/Desktop/HAL/WB11/style.css",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 0,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/CSS/CSS.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 27.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,1,-32000,-32000,-1,-1,649,712,89,1368",
+			"project": "",
+			"replace":
+			{
+				"height": 50.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
