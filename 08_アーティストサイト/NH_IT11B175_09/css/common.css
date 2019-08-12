@@ -8,7 +8,8 @@
   /* font-family: 'Sawarabi Gothic', sans-serif; */
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar
+{
   display:none;
 }
 
@@ -22,6 +23,31 @@ body
   letter-spacing: 1.5px;
   line-height: 1.75;
 }
+
+/*------------- ローディング -------------*/
+
+#loading
+{
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+#loader-wrap 
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+  z-index: 10000;
+}
+
+/*------------- ローディング終わり -------------*/
+
+/*------------- ナビゲーション -------------*/
 
 nav
 {
@@ -68,7 +94,8 @@ nav
         margin-top: 10px;
       }
       
-      nav ul li .button::before {
+      nav ul li .button::before 
+      {
         position: absolute;
         top: 0;
         left: 0;
@@ -82,7 +109,8 @@ nav
         transition: transform .3s;
       }
       
-      nav ul li .button:hover::before {
+      nav ul li .button:hover::before 
+      {
         transform-origin: left top;
         transform: skewX(-30deg) scale(1, 1);
       }
@@ -102,7 +130,98 @@ nav
         color: #fff;
       }
 
-.block {
+
+/*------------- ナビゲーション終わり -------------*/
+
+
+/*------------- 汎用 -------------*/
+
+p 
+{
+  display: inline-block;
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+section
+{
+  color: #fff;
+}
+
+.musicSection
+{
+}
+
+  .musicSection .left-contents
+  {
+    margin-right: 300px;
+  }
+
+  .musicSection .left-contents .desc
+  {
+    margin-top: 15px;
+  }
+
+  .btn-box {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    position: relative;
+    border: 2px solid #9ec34b;
+    transition: .4s;
+    float: right;
+    margin-top: 100px;
+  }
+
+  .btn-box:hover {
+    border: 2px solid transparent;
+    color: #FFF;
+  }
+
+  .btn-box:before, .btn-box:after {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transform: scale(0);
+    transition: .2s;
+  }
+
+  .btn-box:before {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform-origin: 100% 0%;
+  }
+
+  .btn-box:after {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform-origin: 0% 100%;
+  }
+
+  .btn-box:hover:after,
+  .btn-box:hover:before {
+    transform: scale(1);
+  }
+
+/*------------- 汎用終わり -------------*/
+
+
+/*------------- ブロック群 -------------*/
+
+.block 
+{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -113,16 +232,8 @@ nav
   top: 0;
 }
 
-/* あとで消す */
-p {
-  display: inline-block;
-  font-size: 60px;
-  padding: 0;
-  margin: 0;
-  color: #fff;
-}
-
-.block-one {
+.block-one 
+{
   background-image: url(../images/sakana02.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -131,38 +242,43 @@ p {
   z-index: 1;
 }
 
-.block-two {
+.block-two 
+{
   background:rgba(10, 10, 10, 0.2);
   z-index: 2;
 }
 
-  .block-two section
-  {
-    color: #fff;
-  }
-
-.block-three {
+.block-three 
+{
   background: #000;
   z-index: 3;
 }
-.block-four {
+
+.block-four 
+{
   /* background: blueviolet; */
-  background:rgba(10, 10, 10, 0.2);
   z-index: 4;
 }
-.block-five {
-  background: greenyellow;
+
+.block-five
+{
+  background:rgba(10, 10, 10, 0.5);
   z-index: 5;
 }
 
-#scroll-box {
+.block-six
+{
+  background: #000;
+  z-index: 6;
+}
+
+/*------------- ブロック群終わり -------------*/
+
+#scroll-box 
+{
   overflow: scroll;
   overflow-x:hidden;
   height: 100vh;
-}
-
-#scroll-contents {
-  /* height: 2000px; */
 }
 
 video#bgvid 
@@ -187,6 +303,7 @@ video#bgvid
   z-index: 100;
   position: fixed;
 }
+
 #scroll-nav img
 {
   display: block;
@@ -196,7 +313,8 @@ video#bgvid
 /* アニメーション */
 
 /* フェードイン */
-.css-fade--in{
+.css-fade--in
+{
   animation-name:fade-in;
   animation-duration:2s;
   animation-timing-function: ease-out;
@@ -206,27 +324,34 @@ video#bgvid
   animation-fill-mode: forwards;
 }
 
-@keyframes fade-in {
+@keyframes fade-in 
+{
   0% {opacity: 0; transform: translate3d(0,30px,0);}
   100% {opacity: 1; transform: translate3d(0,0,0);}
 }
 
 /* 点滅 */
-.blinking{
+.blinking
+{
 	-webkit-animation:blink 0.7s ease-in-out infinite alternate;
     -moz-animation:blink 0.7s ease-in-out infinite alternate;
     animation:blink 0.7s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes blink{
+@-webkit-keyframes blink
+{
     0% {opacity:0;}
     100% {opacity:1;}
 }
-@-moz-keyframes blink{
+
+@-moz-keyframes blink
+{
     0% {opacity:0;}
     100% {opacity:1;}
 }
-@keyframes blink{
+
+@keyframes blink
+{
     0% {opacity:0;}
     100% {opacity:1;}
 }

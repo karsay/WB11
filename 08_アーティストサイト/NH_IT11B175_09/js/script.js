@@ -1,41 +1,73 @@
+$(function()
+{
+    $(window).on('load',function()
+    {
+      $("#loader-wrap").delay(2000).fadeOut('slow');
+    });
+
+    function loaderClose()
+    {
+      $("#loader-wrap").fadeOut('slow');
+    }
+    setTimeout(loaderClose,10000);
+});
 
 $(function()
 { 
   $('#scroll-box').scroll(function()
-  {
-    var top = $(".css-fade").offset().top; // ターゲットの位置取得
-    var top1 = $(".css-fade1").offset().top;
+  { 
+    var videoTop = $("#video1").offset().top;
+    var video = document.getElementById('video1');
+    var top = $(".css-fade-0").offset().top; // ターゲットの位置取得
+    var top1 = $(".css-fade-1").offset().top;
+    var top2 = $(".css-fade-2").offset().top;
     // console.log($(this).scrollTop());
     // console.log(top);
+    var videoPostion = videoTop - $(window).height() + 50;
     var position = top - $(window).height();  // 発火させたい位置
     var position1 = top1 - $(window).height();
+    var position2 = top2 - $(window).height();
+
+    if($(window).scrollTop() > videoPostion)
+    {
+      video.play();
+    }else{
+      video.currentTime = 0;
+    }
     
     if($(window).scrollTop() > position)
     {
-      $(".css-fade").addClass('css-fade--in');
+      $(".css-fade-0").addClass('css-fade--in');
     }else{
-      $(".css-fade").removeClass('css-fade--in');
+      $(".css-fade-0").removeClass('css-fade--in');
     }
+
     if($(window).scrollTop() > position1)
     {
-      $(".css-fade1").addClass('css-fade--in');
+      $(".css-fade-1").addClass('css-fade--in');
     }else{
-      $(".css-fade1").removeClass('css-fade--in');
+      $(".css-fade-1").removeClass('css-fade--in');
     }
+
+    if($(window).scrollTop() > position2)
+    {
+      $(".css-fade-2").addClass('css-fade--in');
+    }else{
+      $(".css-fade-2").removeClass('css-fade--in');
+    }
+
   })
 });
 
+// 操作対象のvideoを指定
 
-
-// // 操作対象のvideoを指定
-// var video = $('#video01'); 
-// // 動画の再生 
+// 動画の再生 
 // $('#play').click(function(){
-//   video.play();
+//   
 // }); 
 // // 動画の一時停止
 // $('#stop').click(function(){
-//  video.pause(); 
+//  
 // });
 // // 動画の頭出し（任意の秒へ移動）
 // $('#atama').click(function(){
