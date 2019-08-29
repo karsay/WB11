@@ -240,11 +240,12 @@ section
   background-position-x: center;
   color: #fff;
   z-index: 1;
+  margin-top: -125px;
 }
 
 .block-two 
 {
-  background:rgba(10, 10, 10, 0.2);
+  background:rgba(10, 10, 10, 0.5);
   z-index: 2;
 }
 
@@ -268,8 +269,24 @@ section
 
 .block-six
 {
-  background: #000;
+  background: #fff;
   z-index: 6;
+}
+.block-six p
+{
+  color: #000;
+}
+
+.block-seven
+{
+  /* background: #000; */
+  z-index: 7;
+}
+
+.block-eight
+{
+  background:rgba(10, 10, 10, 0.5);
+  z-index: 8;
 }
 
 /*------------- ブロック群終わり -------------*/

@@ -1,3 +1,4 @@
+// ロード画面処理
 $(function()
 {
     $(window).on('load',function()
@@ -12,27 +13,48 @@ $(function()
     setTimeout(loaderClose,10000);
 });
 
+
+// フェード、ビデオ処理
 $(function()
 { 
   $('#scroll-box').scroll(function()
   { 
-    var videoTop = $("#video1").offset().top;
-    var video = document.getElementById('video1');
+    var video = document.getElementById('video');
+    var video1 = document.getElementById('video1');
+
+    var videoTop = $("#video").offset().top;
+    var videoTop1 = $("#video1").offset().top;
+
     var top = $(".css-fade-0").offset().top; // ターゲットの位置取得
     var top1 = $(".css-fade-1").offset().top;
     var top2 = $(".css-fade-2").offset().top;
+    var top3 = $(".css-fade-3").offset().top;
+    var top4 = $(".css-fade-4").offset().top;
+
     // console.log($(this).scrollTop());
     // console.log(top);
+
     var videoPostion = videoTop - $(window).height() + 50;
+    var videoPostion1 = videoTop1 - $(window).height() + 50;
+
     var position = top - $(window).height();  // 発火させたい位置
     var position1 = top1 - $(window).height();
     var position2 = top2 - $(window).height();
+    var position3 = top3 - $(window).height();
+    var position4 = top4 - $(window).height();
 
     if($(window).scrollTop() > videoPostion)
     {
       video.play();
     }else{
       video.currentTime = 0;
+    }
+
+    if($(window).scrollTop() > videoPostion1)
+    {
+      video1.play();
+    }else{
+      video1.currentTime = 0;
     }
     
     if($(window).scrollTop() > position)
@@ -54,6 +76,20 @@ $(function()
       $(".css-fade-2").addClass('css-fade--in');
     }else{
       $(".css-fade-2").removeClass('css-fade--in');
+    }
+
+    if($(window).scrollTop() > position3)
+    {
+      $(".css-fade-3").addClass('css-fade--in');
+    }else{
+      $(".css-fade-3").removeClass('css-fade--in');
+    }
+
+    if($(window).scrollTop() > position4)
+    {
+      $(".css-fade-4").addClass('css-fade--in');
+    }else{
+      $(".css-fade-4").removeClass('css-fade--in');
     }
 
   })
