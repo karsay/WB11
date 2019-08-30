@@ -21,27 +21,34 @@ $(function()
   { 
     var video = document.getElementById('video');
     var video1 = document.getElementById('video1');
+    var video2 = document.getElementById('video2');
 
     var videoTop = $("#video").offset().top;
     var videoTop1 = $("#video1").offset().top;
+    var videoTop2 = $("#video2").offset().top;
+
+    var videoPostion = videoTop - $(window).height() + 50;
+    var videoPostion1 = videoTop1 - $(window).height() + 50;
+    var videoPostion2 = videoTop2 - $(window).height() + 50;
 
     var top = $(".css-fade-0").offset().top; // ターゲットの位置取得
     var top1 = $(".css-fade-1").offset().top;
     var top2 = $(".css-fade-2").offset().top;
     var top3 = $(".css-fade-3").offset().top;
     var top4 = $(".css-fade-4").offset().top;
-
-    // console.log($(this).scrollTop());
-    // console.log(top);
-
-    var videoPostion = videoTop - $(window).height() + 50;
-    var videoPostion1 = videoTop1 - $(window).height() + 50;
+    var top5 = $(".css-fade-5").offset().top;
+    var top6 = $(".css-fade-6").offset().top;
 
     var position = top - $(window).height();  // 発火させたい位置
     var position1 = top1 - $(window).height();
     var position2 = top2 - $(window).height();
     var position3 = top3 - $(window).height();
     var position4 = top4 - $(window).height();
+    var position5 = top5 - $(window).height();
+    var position6 = top6 - $(window).height();
+
+    // console.log($(this).scrollTop());
+    // console.log(top);
 
     if($(window).scrollTop() > videoPostion)
     {
@@ -55,6 +62,13 @@ $(function()
       video1.play();
     }else{
       video1.currentTime = 0;
+    }
+
+    if($(window).scrollTop() > videoPostion2)
+    {
+      video2.play();
+    }else{
+      video2.currentTime = 0;
     }
     
     if($(window).scrollTop() > position)
@@ -90,6 +104,20 @@ $(function()
       $(".css-fade-4").addClass('css-fade--in');
     }else{
       $(".css-fade-4").removeClass('css-fade--in');
+    }
+
+    if($(window).scrollTop() > position5)
+    {
+      $(".css-fade-5").addClass('css-fade--in');
+    }else{
+      $(".css-fade-5").removeClass('css-fade--in');
+    }
+
+    if($(window).scrollTop() > position6)
+    {
+      $(".css-fade-6").addClass('css-fade--in');
+    }else{
+      $(".css-fade-6").removeClass('css-fade--in');
     }
 
   })
