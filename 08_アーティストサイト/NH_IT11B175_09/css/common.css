@@ -23,6 +23,12 @@ body
   line-height: 1.75;
 }
 
+video
+{
+  height: 100vh;
+  width: 100%;
+}
+
 /*------------- ローディング -------------*/
 
 #loading

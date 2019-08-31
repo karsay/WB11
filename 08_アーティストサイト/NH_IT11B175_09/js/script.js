@@ -10,7 +10,7 @@ $(function()
     {
       $("#loader-wrap").fadeOut('slow');
     }
-    setTimeout(loaderClose,10000);
+    setTimeout(loaderClose,5000);
 });
 
 
