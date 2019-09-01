@@ -4,11 +4,18 @@ $(function()
     $(window).on('load',function()
     {
       $("#loader-wrap").delay(2000).fadeOut('slow');
+      _fadeIn();
     });
 
     function loaderClose()
     {
       $("#loader-wrap").fadeOut('slow');
+      _fadeIn();
+    }
+
+    function _fadeIn()
+    {
+      $("#content-box").fadeIn(5000);
     }
     setTimeout(loaderClose,5000);
 });
@@ -49,6 +56,13 @@ $(function()
 
     // console.log($(this).scrollTop());
     // console.log(top);
+
+    if($(this).scrollTop() > 9000)
+    {
+      $('#scroll-nav').hide();
+    } else {
+      $('#scroll-nav').show();
+    }
 
     if($(window).scrollTop() > videoPostion)
     {
