@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* ユニバーサルセレクタ：全称セレクタ */
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Modak', cursive;
+}
+
+/* 要素セレクタ：タイプセレクタ */
+body
+{
+  color: #000;
+  background-color: #ffffff;
+}
+
+h1
+{
+  width: 400px;
+  margin: 20px 0 0 20px;
+  padding: 12px 10px 10px 10px;
+  border-left: 20px solid #a00;
+  font-size: 1.4rem;
+
+  color: #fff;
+  background-color: #333;
+}
+
+h2
+{
+  width: 200px;
+
+  margin: 20px 0 20px 30px;
+  padding: 8px;
+  border-left: 10px solid #00a;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #555;
+}
+
+div.default
+{
+  margin-bottom: 50px;
+  border:10px solid gray;
+  box-sizing: border-box;
+}
+
+div.default img
+{
+  vertical-align: bottom;
+}
+
+.size-num img
+{
+  width: 500px;
+}
+
+.size-100p img
+{
+  width: 100%;
+}
+
+.size-max img
+{
+  max-width: 100%;
+}
+
+.size-min img
+{
+  min-width: 100%;
+}
+
+/* background-image 可変 */
+div.default-back
+{
+  height: 600px;
+  margin-bottom: 50px;
+  border:10px solid gray;
+  box-sizing: border-box;
+
+  background-image: url(../images/koyuki.jpg);
+  background-repeat: no-repeat;
+
+}
+
+.size-number
+{
+  background-size: 500px 500px;
+}
+
+.size-percent
+{
+  background-size: 100% 100%;
+}
+
+.size-cover
+{
+  background-size: cover;
+  background-position: 0% 50%;
+}
+
+html , body
+{
+  height: 100%;
+}
+
+div.size-contain
+{
+  height: 100%;
+  background-size: contain;
+  margin-bottom: 0;
+}
+
+/* パララックス風サイト */
+
+html , body
+{
+  height: 100%;
+}
+
+/* ほんとはh1で設定 */
+h3
+{
+  width: 100%;
+  padding: 12px 10px 10px 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.default-para
+{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.div-01
+{
+  background: url(../images/img01.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  background-attachment: fixed;
+}
+
+.div-02
+{
+  color: #fff;
+  background-color: #00008b;
+}
+
+.div-03
+{
+  background: url(../images/img03.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  background-attachment: fixed;
+}
+
+
+.div-04
+{
+  color: #fff;
+  background-color: #00008b;
+}

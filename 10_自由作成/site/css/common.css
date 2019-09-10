@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* ユニバーサルセレクタ：全称セレクタ */
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+/* 要素セレクタ：タイプセレクタ */
+body
+{
+  color: #000;
+  background-color: #ddd;
+}
+
+html , body
+{
+  height: 100%;
+}
+
+header
+{
+  height: 100%;
+  background-image: url(../images/すぐに消せ.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 50%;
+}
+
+  header h1
+  {
+    
+  }
+
+article
+{
+  width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+footer
+{
+  width: 100%;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
