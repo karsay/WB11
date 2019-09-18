@@ -10,8 +10,8 @@
 /* 要素セレクタ：タイプセレクタ */
 body
 {
-  color: #000;
-  background-color: #ddd;
+  color: #fff;
+  background-color: #131218;
 }
 
 html , body
@@ -22,15 +22,31 @@ html , body
 header
 {
   height: 100%;
-  background-image: url(../images/すぐに消せ.jpg);
-  background-size: cover;
+  background-image: url(../images/macbook03.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 0 50%;
+  background-position: 0 100%;
 }
+
+  header div
+  {
+    width: 100%;
+    text-align: center;
+    color: #63636e;
+    font-size: 1.3rem;
+    padding-top: 175px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #000;
+  }
 
   header h1
   {
-    
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    /* テキストシャドウ */
+    text-shadow: 0px 0px 10px #000;
   }
 
 article
@@ -38,10 +54,36 @@ article
   width: 1000px;
   padding: 20px;
   margin: 0 auto;
-  background-color: #fff;
-  box-sizing: border-box;
+  /*background-color: #fff;*/
 }
 
+
+.default-para
+{
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.div-01
+{
+  background: url(../images/test.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-attachment: fixed;
+}
+
+.div-01 img
+{
+  height: 80%;
+}
+.div-02
+{
+  background: url(../images/macbook05.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  /*background-attachment: fixed;*/
+}
 footer
 {
   width: 100%;
