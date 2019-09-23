@@ -26,18 +26,19 @@ header
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 0 100%;
+  background-position: 0% 100%;
+  text-shadow: 0px 0px 10px #000;
 }
 
-  header div
+  header span
   {
+    display: block;
     width: 100%;
     text-align: center;
     color: #63636e;
     font-size: 1.3rem;
-    padding-top: 175px;
+    padding-top: 10px;
     font-weight: bold;
-    text-shadow: 0px 0px 10px #000;
   }
 
   header h1
@@ -45,51 +46,183 @@ header
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
-    /* テキストシャドウ */
-    text-shadow: 0px 0px 10px #000;
   }
+
+  #header-contentbox
+  {
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+    .header-content
+    {
+      font-weight: bold;
+      width: 40%;
+      display: inline-block;
+      margin: 80px 0 0 50px;
+      padding: 10px 0 0 5px;
+      border-top: 2px solid #aaa;
+      font-size: 1.3rem;
+    }
+
+.default-para
+{
+  box-sizing: border-box;
+  height: 110%;
+}
+
+
+.div-01
+{
+  /* background: url(../images/image01.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 400px 50%;
+  background-attachment: fixed;
+  position: relative;
+}
 
 article
 {
   width: 1000px;
   padding: 20px;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   /*background-color: #fff;*/
 }
 
+  article #graphic-box
+  {
+    padding-top: 15%;
+  }
 
-.default-para
-{
-  box-sizing: border-box;
-  height: 100%;
-}
+    article #graphic-box span
+    {
+      display: block;
+      width: 100%;
+      color: #63636e;
+      font-size: 1.3rem;
+      padding-top: 10px;
+      font-weight: bold;
+    }
 
-.div-01
+    article #graphic-box h1
+    {
+      font-weight: bold;
+      font-size: 1.9rem;
+    }
+
+    article #graphic-box #graphic-section
+    {
+      padding-top:10px;
+      color: #63636e;
+      font-weight: bold;
+    }
+
+
+.div-02
 {
-  background: url(../images/test.jpg);
-  background-size: cover;
+  background: url(../images/macbook06.png);
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: center 100%;
   background-attachment: fixed;
 }
 
-.div-01 img
+  #model-box
+  {
+    /* background:rgba(10, 10, 10, 0.5); */
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    padding-top: 300px;
+  }
+
+  #model-box .model-section
+  {
+    font-weight: bold;
+    color: #63636e;
+    width: 20%;
+    display: inline-block;
+    padding: 30px 0 0 80px;
+  }
+
+  #model-box .right
+  {
+    margin-left: 300px;
+  }
+
+  #model-box .model-section p
+  {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+.div-03
 {
-  height: 80%;
+  background: url(../images/macbook00.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-attachment: fixed;
+  position: relative;
 }
-.div-02
-{
-  background: url(../images/macbook05.jpg);
-  background-size: cover;
-  background-position: 0 50%;
-  /*background-attachment: fixed;*/
-}
+
+ #perform-box
+ {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 3%;
+    font-weight: bold;
+    color: #63636e;
+    margin-top: 150px;
+ }
+
+  #perform-box h1
+  {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+
+  #perform-box span
+  {
+    font-size: 1.2rem;
+  }
+
+  #perform-box ul
+  {
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  #perform-box ul li
+  {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  #perform-box ul li h2
+  {
+    color: #fff;
+    font-size: 2rem;
+  }
+
 footer
 {
   width: 100%;
   padding: 8px;
-  background-color: #000;
-  color: #fff;
+  background-color: #131218;
+  color: #63636e;
   text-align: center;
   box-sizing: border-box;
 }
