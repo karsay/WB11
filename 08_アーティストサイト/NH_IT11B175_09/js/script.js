@@ -1,31 +1,25 @@
 // ロード画面処理
-$(function()
-{
-    $(window).on('load',function()
-    {
-      $("#loader-wrap").delay(2000).fadeOut('slow');
-      _fadeIn();
-    });
+$(function () {
+  $(window).on('load', function () {
+    $("#loader-wrap").delay(2000).fadeOut('slow');
+    _fadeIn();
+  });
 
-    function loaderClose()
-    {
-      $("#loader-wrap").fadeOut('slow');
-      _fadeIn();
-    }
+  function loaderClose() {
+    $("#loader-wrap").fadeOut('slow');
+    _fadeIn();
+  }
 
-    function _fadeIn()
-    {
-      $("#content-box").fadeIn(5000);
-    }
-    setTimeout(loaderClose,5000);
+  function _fadeIn() {
+    $("#content-box").fadeIn(5000);
+  }
+  setTimeout(loaderClose, 5000);
 });
 
 
 // フェード、ビデオ処理
-$(function()
-{ 
-  $('#scroll-box').scroll(function()
-  { 
+$(function () {
+  $('#scroll-box').scroll(function () {
     var video = document.getElementById('video');
     var video1 = document.getElementById('video1');
     var video2 = document.getElementById('video2');
@@ -57,80 +51,69 @@ $(function()
     // console.log($(this).scrollTop());
     // console.log(top);
 
-    if($(this).scrollTop() > 9000)
-    {
+    if ($(this).scrollTop() > 9000) {
       $('#scroll-nav').hide();
     } else {
       $('#scroll-nav').show();
     }
 
-    if($(window).scrollTop() > videoPostion)
-    {
+    if ($(window).scrollTop() > videoPostion) {
       video.play();
-    }else{
+    } else {
       video.currentTime = 0;
     }
 
-    if($(window).scrollTop() > videoPostion1)
-    {
+    if ($(window).scrollTop() > videoPostion1) {
       video1.play();
-    }else{
+    } else {
       video1.currentTime = 0;
     }
 
-    if($(window).scrollTop() > videoPostion2)
-    {
+    if ($(window).scrollTop() > videoPostion2) {
       video2.play();
-    }else{
+    } else {
       video2.currentTime = 0;
     }
-    
-    if($(window).scrollTop() > position)
-    {
+
+    if ($(window).scrollTop() > position) {
       $(".css-fade-0").addClass('css-fade--in');
-    }else{
+    } else {
       $(".css-fade-0").removeClass('css-fade--in');
     }
 
-    if($(window).scrollTop() > position1)
-    {
+    if ($(window).scrollTop() > position1) {
       $(".css-fade-1").addClass('css-fade--in');
-    }else{
+    } else {
       $(".css-fade-1").removeClass('css-fade--in');
     }
 
-    if($(window).scrollTop() > position2)
-    {
+    if ($(window).scrollTop() > position2) {
       $(".css-fade-2").addClass('css-fade--in');
-    }else{
+    } else {
       $(".css-fade-2").removeClass('css-fade--in');
     }
 
-    if($(window).scrollTop() > position3)
-    {
+    if ($(window).scrollTop() > position3) {
       $(".css-fade-3").addClass('css-fade--in');
-    }else{
+    } else {
       $(".css-fade-3").removeClass('css-fade--in');
     }
 
-    if($(window).scrollTop() > position4)
-    {
+    if ($(window).scrollTop() > position4) {
       $(".css-fade-4").addClass('css-fade--in');
-    }else{
+    } else {
       $(".css-fade-4").removeClass('css-fade--in');
     }
 
-    if($(window).scrollTop() > position5)
-    {
+    if ($(window).scrollTop() > position5) {
       $(".css-fade-5").addClass('css-fade--in');
-    }else{
+    } else {
       $(".css-fade-5").removeClass('css-fade--in');
     }
 
-    if($(window).scrollTop() > position6)
-    {
+    if ($(window).scrollTop() > position6) {
       $(".css-fade-6").addClass('css-fade--in');
-    }else{
+    } else {
       $(".css-fade-6").removeClass('css-fade--in');
     }
 

@@ -6,25 +6,25 @@
  * @license  MIT License (https://github.com/rewish/jquery-bgswitcher/blob/master/LICENSE.md)
  * @link     https://github.com/rewish/jquery-bgswitcher
  */
-(function($) {
+(function ($) {
   'use strict';
 
   var loadedImages = {},
 
-      slice = Array.prototype.slice,
-      toString = Object.prototype.toString,
+    slice = Array.prototype.slice,
+    toString = Object.prototype.toString,
 
-      corners = ['Top', 'Right', 'Bottom', 'Left'],
-      backgroundProperties = [
-        'Attachment', 'Color', 'Image', 'Repeat',
-        'Position', 'Size', 'Clip', 'Origin'
-      ];
+    corners = ['Top', 'Right', 'Bottom', 'Left'],
+    backgroundProperties = [
+      'Attachment', 'Color', 'Image', 'Repeat',
+      'Position', 'Size', 'Clip', 'Origin'
+    ];
 
-  $.fn.bgswitcher = function() {
+  $.fn.bgswitcher = function () {
     var args = arguments,
-        instanceKey = BgSwitcher.keys.instance;
+      instanceKey = BgSwitcher.keys.instance;
 
-    return this.each(function() {
+    return this.each(function () {
       var instance = $.data(this, instanceKey);
 
       if (!instance) {
@@ -60,7 +60,7 @@
      *
      * @param {string|Array} one
      */
-    dispatch: function(one) {
+    dispatch: function (one) {
       switch (toString.call(one)) {
         case '[object Object]':
           this.setConfig(one);
@@ -78,7 +78,7 @@
      *
      * @param {Object} config
      */
-    setConfig: function(config) {
+    setConfig: function (config) {
       this.config = $.extend(this.config, config);
 
       if (typeof this.config.random !== 'undefined') {
@@ -93,7 +93,7 @@
      *
      * @param {Array} images
      */
-    setImages: function(images) {
+    setImages: function (images) {
       this.imageList = new this.constructor.ImageList(images);
 
       if (this.config.shuffle) {
@@ -106,7 +106,7 @@
      *
      * @param {Function} fn
      */
-    setSwitchHandler: function(fn) {
+    setSwitchHandler: function (fn) {
       this.switchHandler = $.proxy(fn, this);
     },
 
@@ -116,14 +116,14 @@
      * @param {string} type
      * @returns {Function}
      */
-    getBuiltInSwitchHandler: function(type) {
+    getBuiltInSwitchHandler: function (type) {
       return this.constructor.switchHandlers[type || this.config.effect];
     },
 
     /**
      * Refresh
      */
-    refresh: function() {
+    refresh: function () {
       this.setImages(this.config.images);
       this.setSwitchHandler(this.getBuiltInSwitchHandler());
       this._prepareSwitching();
@@ -136,7 +136,7 @@
     /**
      * Start switching
      */
-    start: function() {
+    start: function () {
       if (!this._timerID) {
         this._timerID = setTimeout($.proxy(this, 'next'), this.config.interval);
       }
@@ -145,7 +145,7 @@
     /**
      * Stop switching
      */
-    stop: function() {
+    stop: function () {
       if (this._timerID) {
         clearTimeout(this._timerID);
         this._timerID = null;
@@ -155,7 +155,7 @@
     /**
      * Toggle between start/stop
      */
-    toggle: function() {
+    toggle: function () {
       if (this._timerID) {
         this.stop();
       } else {
@@ -166,7 +166,7 @@
     /**
      * Reset switching
      */
-    reset: function() {
+    reset: function () {
       this.index = 0;
       this._prepareSwitching();
     },
@@ -174,7 +174,7 @@
     /**
      * Go to next switching
      */
-    next: function() {
+    next: function () {
       var max = this.imageList.count();
 
       if (!this.config.loop && this.index + 1 === max) {
@@ -191,7 +191,7 @@
     /**
      * Go to previous switching
      */
-    prev: function() {
+    prev: function () {
       if (!this.config.loop && this.index === 0) {
         return;
       }
@@ -208,7 +208,7 @@
      *
      * @param {number} index
      */
-    select: function(index) {
+    select: function (index) {
       if (index === -1) {
         index = this.imageList.count() - 1;
       }
@@ -220,7 +220,7 @@
     /**
      * Switching the background image
      */
-    switching: function() {
+    switching: function () {
       var started = !!this._timerID;
 
       if (started) {
@@ -239,7 +239,7 @@
     /**
      * Destroy...
      */
-    destroy: function() {
+    destroy: function () {
       this.stop();
       this._stopListeningToResize();
 
@@ -262,17 +262,17 @@
     /**
      * Adjust rectangle
      */
-    _adjustRectangle: function() {
+    _adjustRectangle: function () {
       var corner,
-          i = 0,
-          length = corners.length,
-          offset = this.$el.position(),
-          copiedStyles = {
-            top: offset.top,
-            left: offset.left,
-            width: this.$el.innerWidth(),
-            height: this.$el.innerHeight()
-          };
+        i = 0,
+        length = corners.length,
+        offset = this.$el.position(),
+        copiedStyles = {
+          top: offset.top,
+          left: offset.left,
+          width: this.$el.innerWidth(),
+          height: this.$el.innerHeight()
+        };
 
       for (; i < length; i++) {
         corner = corners[i];
@@ -286,7 +286,7 @@
     /**
      * Setup background element
      */
-    _setupBackgroundElement: function() {
+    _setupBackgroundElement: function () {
       this.$bg = $(document.createElement('div'));
       this.$bg.css({
         position: 'absolute',
@@ -308,13 +308,13 @@
     /**
      * Create switchable element
      */
-    _createSwitchableElement: function() {
+    _createSwitchableElement: function () {
       if (this.$switchable) {
         this.$switchable.remove();
       }
 
       this.$switchable = this.$bg.clone();
-      this.$switchable.css({top: 0, left: 0, margin: 0, border: 'none'});
+      this.$switchable.css({ top: 0, left: 0, margin: 0, border: 'none' });
       this.$switchable.appendTo(this.$bg);
     },
 
@@ -323,10 +323,10 @@
      */
     _copyBackgroundStyles: function () {
       var prop,
-          copiedStyle = {},
-          i = 0,
-          length = backgroundProperties.length,
-          backgroundPosition = 'backgroundPosition';
+        copiedStyle = {},
+        i = 0,
+        length = backgroundProperties.length,
+        backgroundPosition = 'backgroundPosition';
 
       for (; i < length; i++) {
         prop = 'background' + backgroundProperties[i];
@@ -347,9 +347,9 @@
     /**
      * Listen to the resize event
      */
-    _listenToResize: function() {
+    _listenToResize: function () {
       var that = this;
-      this._resizeHandler = function() {
+      this._resizeHandler = function () {
         that._adjustRectangle();
       };
       $(window).on('resize', this._resizeHandler);
@@ -358,7 +358,7 @@
     /**
      * Stop listening to the resize event
      */
-    _stopListeningToResize: function() {
+    _stopListeningToResize: function () {
       $(window).off('resize', this._resizeHandler);
       this._resizeHandler = null;
     },
@@ -366,7 +366,7 @@
     /**
      * Prepare the Switching
      */
-    _prepareSwitching: function() {
+    _prepareSwitching: function () {
       this.$bg.css('backgroundImage', this.imageList.url(this.index));
     }
   });
@@ -399,33 +399,33 @@
    * @type {Object}
    */
   BgSwitcher.switchHandlers = {
-    fade: function($el) {
-      $el.animate({opacity: 0}, this.config.duration, this.config.easing);
+    fade: function ($el) {
+      $el.animate({ opacity: 0 }, this.config.duration, this.config.easing);
     },
 
-    blind: function($el) {
-      $el.animate({height: 0}, this.config.duration, this.config.easing);
+    blind: function ($el) {
+      $el.animate({ height: 0 }, this.config.duration, this.config.easing);
     },
 
-    clip: function($el) {
+    clip: function ($el) {
       $el.animate({
         top: parseInt($el.css('top'), 10) + $el.height() / 2,
         height: 0
       }, this.config.duration, this.config.easing);
     },
 
-    slide: function($el) {
-      $el.animate({top: -$el.height()}, this.config.duration, this.config.easing);
+    slide: function ($el) {
+      $el.animate({ top: -$el.height() }, this.config.duration, this.config.easing);
     },
 
-    drop: function($el) {
+    drop: function ($el) {
       $el.animate({
         left: -$el.width(),
         opacity: 0
       }, this.config.duration, this.config.easing);
     },
 
-    hide: function($el) {
+    hide: function ($el) {
       $el.hide();
     }
   };
@@ -436,7 +436,7 @@
    * @param {String} name
    * @param {Function} fn
    */
-  BgSwitcher.defineEffect = function(name, fn) {
+  BgSwitcher.defineEffect = function (name, fn) {
     this.switchHandlers[name] = fn;
   };
 
@@ -446,7 +446,7 @@
    * @param {Array} images
    * @constructor
    */
-  BgSwitcher.ImageList = function(images) {
+  BgSwitcher.ImageList = function (images) {
     this.images = images;
     this.createImagesBySequence();
     this.preload();
@@ -458,24 +458,24 @@
      *
      * @returns {boolean}
      */
-    isSequenceable: function() {
+    isSequenceable: function () {
       return typeof this.images[0] === 'string' &&
-          typeof this.images[1] === 'number' &&
-          typeof this.images[2] === 'number';
+        typeof this.images[1] === 'number' &&
+        typeof this.images[2] === 'number';
     },
 
     /**
      * Create an images by sequence
      */
-    createImagesBySequence: function() {
+    createImagesBySequence: function () {
       if (!this.isSequenceable()) {
         return;
       }
 
       var images = [],
-          base = this.images[0],
-          min = this.images[1],
-          max = this.images[2];
+        base = this.images[0],
+        min = this.images[1],
+        max = this.images[2];
 
       do {
         images.push(base.replace(/\.\w+$/, min + '$&'));
@@ -487,10 +487,10 @@
     /**
      * Preload an images
      */
-    preload: function() {
+    preload: function () {
       var path,
-          length = this.images.length,
-          i = 0;
+        length = this.images.length,
+        i = 0;
 
       for (; i < length; i++) {
         path = this.images[i];
@@ -504,10 +504,10 @@
     /**
      * Shuffle an images
      */
-    shuffle: function() {
+    shuffle: function () {
       var j, t,
-          i = this.images.length,
-          original = this.images.join();
+        i = this.images.length,
+        original = this.images.join();
 
       if (!i) {
         return;
@@ -531,7 +531,7 @@
      * @param {number} index
      * @returns {string}
      */
-    get: function(index) {
+    get: function (index) {
       return this.images[index];
     },
 
@@ -541,7 +541,7 @@
      * @param {number} index
      * @returns {string}
      */
-    url: function(index) {
+    url: function (index) {
       return 'url(' + this.get(index) + ')';
     },
 
@@ -550,7 +550,7 @@
      *
      * @returns {number}
      */
-    count: function() {
+    count: function () {
       return this.images.length;
     }
   });
